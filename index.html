@@ -12,28 +12,27 @@
       }
 
       body {
-        font-family: "Arial", sans-serif;
+        font-family: "Roboto", sans-serif;
         line-height: 1.6;
-        color: #ccc;
-        background-color: #0a192f;
-        margin: 0;
+        color: #333;
+        background-color: #f0f8ff; /* Baby Blue */
         scroll-behavior: smooth;
       }
 
       header {
-        background: #112240;
-        color: #fff;
+        background: #87cefa; /* Baby Blue */
+        color: #ffffff;
         padding: 1rem 2rem;
         text-align: center;
         position: sticky;
         top: 0;
         z-index: 1000;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease;
+        transition: background 0.3s ease;
       }
 
       header:hover {
-        background: #233554;
+        background: #add8e6; /* Lighter Baby Blue */
       }
 
       header h1 {
@@ -52,18 +51,18 @@
       }
 
       nav ul li a {
-        color: #64ffda;
+        color: #ffffff;
         text-decoration: none;
         font-weight: bold;
         transition: color 0.3s ease;
       }
 
       nav ul li a:hover {
-        color: #ffffff;
+        color: #333;
       }
 
       .hero {
-        background: url("https://source.unsplash.com/1600x900/?education")
+        background: url("https://source.unsplash.com/1600x900/?finance")
           no-repeat center center/cover;
         color: #fff;
         height: 100vh;
@@ -71,27 +70,31 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        animation: fadeIn 1.5s ease-in-out;
+        position: relative;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+      }
+
+      .hero div {
+        position: relative;
+        z-index: 2;
       }
 
       .hero h2 {
-        font-size: 3rem;
+        font-size: 3.5rem;
         margin-bottom: 1rem;
-        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
       }
 
       .hero p {
         font-size: 1.5rem;
-        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
-      }
-
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
       }
 
       section {
@@ -103,7 +106,8 @@
       section h2 {
         text-align: center;
         margin-bottom: 2rem;
-        color: #64ffda;
+        font-size: 2.5rem;
+        color: #4682b4; /* Steel Blue for contrast */
       }
 
       section p {
@@ -119,25 +123,25 @@
       }
 
       .stats div {
-        background: #112240;
+        background: #ffffff;
         padding: 2rem;
         border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
       }
 
       .stats div:hover {
         transform: translateY(-10px);
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
       }
 
       .stats h3 {
-        color: #64ffda;
+        color: #4682b4;
         margin-bottom: 1rem;
       }
 
       .cta {
-        background: #112240;
+        background: #4682b4;
         color: #fff;
         text-align: center;
         padding: 4rem 2rem;
@@ -145,12 +149,11 @@
 
       .cta h2 {
         margin-bottom: 1rem;
-        color: #64ffda;
       }
 
       .cta a {
-        background: #64ffda;
-        color: #112240;
+        background: #ffffff;
+        color: #4682b4;
         padding: 1rem 2rem;
         text-decoration: none;
         font-weight: bold;
@@ -159,31 +162,30 @@
       }
 
       .cta a:hover {
-        background: #ffffff;
+        background: #add8e6; /* Lighter Baby Blue */
         color: #000;
       }
 
       footer {
-        background: #0a192f;
+        background: #87cefa;
         color: #fff;
         text-align: center;
-        padding: 1rem 0;
-        margin-top: 2rem;
+        padding: 2rem 0;
       }
 
       footer a {
-        color: #64ffda;
+        color: #ffffff;
         text-decoration: none;
         transition: color 0.3s ease;
       }
 
       footer a:hover {
-        color: #ffffff;
+        color: #333;
       }
 
       @media (max-width: 768px) {
         .hero h2 {
-          font-size: 2rem;
+          font-size: 2.5rem;
         }
 
         .hero p {
@@ -217,19 +219,17 @@
 
     <div class="hero">
       <div>
-        <h2>Helping Teens Become Capable and Competent</h2>
-        <p>
-          Empowering youth through financial literacy and essential life skills.
-        </p>
+        <h2>Empowering the Next Generation</h2>
+        <p>Through Financial Literacy and Essential Skills</p>
       </div>
     </div>
 
     <section id="about">
       <h2>What is Mission Saksham?</h2>
       <p>
-        Saksham is a nonprofit organization created and led by teens, delivering
-        free workshops, courses, podcasts, and articles for socio-economic and
-        neurodiverse communities.
+        Saksham is a nonprofit organization led by teens, offering free
+        workshops, courses, and resources to socio-economic and neurodiverse
+        communities.
       </p>
     </section>
 
@@ -271,5 +271,17 @@
         <a href="#privacy">Privacy Policy</a>
       </p>
     </footer>
+
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        });
+      });
+    </script>
   </body>
 </html>
