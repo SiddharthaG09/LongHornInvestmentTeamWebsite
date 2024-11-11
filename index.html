@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mission Saksham</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        line-height: 1.6;
+        color: #ccc;
+        background-color: #0a192f;
+        margin: 0;
+        scroll-behavior: smooth;
+      }
+
+      header {
+        background: #112240;
+        color: #fff;
+        padding: 1rem 2rem;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      header:hover {
+        background: #233554;
+      }
+
+      header h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+      }
+
+      nav ul li {
+        margin: 0 15px;
+      }
+
+      nav ul li a {
+        color: #64ffda;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+      }
+
+      nav ul li a:hover {
+        color: #ffffff;
+      }
+
+      .hero {
+        background: url("https://source.unsplash.com/1600x900/?education")
+          no-repeat center center/cover;
+        color: #fff;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        animation: fadeIn 1.5s ease-in-out;
+      }
+
+      .hero h2 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+      }
+
+      .hero p {
+        font-size: 1.5rem;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      section {
+        padding: 4rem 2rem;
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      section h2 {
+        text-align: center;
+        margin-bottom: 2rem;
+        color: #64ffda;
+      }
+
+      section p {
+        text-align: center;
+        font-size: 1.1rem;
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        text-align: center;
+      }
+
+      .stats div {
+        background: #112240;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .stats div:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      .stats h3 {
+        color: #64ffda;
+        margin-bottom: 1rem;
+      }
+
+      .cta {
+        background: #112240;
+        color: #fff;
+        text-align: center;
+        padding: 4rem 2rem;
+      }
+
+      .cta h2 {
+        margin-bottom: 1rem;
+        color: #64ffda;
+      }
+
+      .cta a {
+        background: #64ffda;
+        color: #112240;
+        padding: 1rem 2rem;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 5px;
+        transition: background 0.3s ease, color 0.3s ease;
+      }
+
+      .cta a:hover {
+        background: #ffffff;
+        color: #000;
+      }
+
+      footer {
+        background: #0a192f;
+        color: #fff;
+        text-align: center;
+        padding: 1rem 0;
+        margin-top: 2rem;
+      }
+
+      footer a {
+        color: #64ffda;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      footer a:hover {
+        color: #ffffff;
+      }
+
+      @media (max-width: 768px) {
+        .hero h2 {
+          font-size: 2rem;
+        }
+
+        .hero p {
+          font-size: 1rem;
+        }
+
+        nav ul {
+          flex-direction: column;
+        }
+
+        nav ul li {
+          margin: 5px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Mission Saksham</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">Home</a></li>
+          <li><a href="#work">Our Work</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#donate">Donate</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <div>
+        <h2>Helping Teens Become Capable and Competent</h2>
+        <p>
+          Empowering youth through financial literacy and essential life skills.
+        </p>
+      </div>
+    </div>
+
+    <section id="about">
+      <h2>What is Mission Saksham?</h2>
+      <p>
+        Saksham is a nonprofit organization created and led by teens, delivering
+        free workshops, courses, podcasts, and articles for socio-economic and
+        neurodiverse communities.
+      </p>
+    </section>
+
+    <section id="work" class="stats">
+      <h2>Our Impact</h2>
+      <div>
+        <h3>$10,000+ Funds Raised</h3>
+        <p>In Financial Education Initiatives</p>
+      </div>
+      <div>
+        <h3>60+ Workshops Conducted</h3>
+        <p>Empowering Teens with Essential Financial Skills</p>
+      </div>
+      <div>
+        <h3>7000+ Influenced Lives</h3>
+        <p>Through Outreach and Online Training</p>
+      </div>
+      <div>
+        <h3>1500+ Neuro-Diverse Kids</h3>
+        <p>Fostering Financial Literacy</p>
+      </div>
+      <div>
+        <h3>500+ Community Members</h3>
+        <p>Active in Advocacy and Awareness Initiatives</p>
+      </div>
+    </section>
+
+    <section id="cta" class="cta">
+      <h2>Join the Mission</h2>
+      <p>
+        Help us empower the next generation with the tools they need to succeed.
+      </p>
+      <a href="#donate">Donate Now</a>
+    </section>
+
+    <footer>
+      <p>
+        &copy; 2024 Mission Saksham | <a href="#contact">Contact Us</a> |
+        <a href="#privacy">Privacy Policy</a>
+      </p>
+    </footer>
+  </body>
+</html>
